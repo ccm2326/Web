@@ -45,34 +45,34 @@ include 'components/add_cart.php';
 
          <div class="swiper-slide slide">
             <div class="content">
-               <span>order online</span>
-               <h3>delicious pizza</h3>
-               <a href="menu.php" class="btn">see menus</a>
+               <span>Camisa de lino</span>
+               <h3>Edición Costa</h3>
+               <a href="menu.php" class="btn">Ver colección</a>
             </div>
             <div class="image">
-               <img src="images/home-img-1.png" alt="">
+               <img src="https://hmperu.vtexassets.com/assets/vtex.file-manager-graphql/images/5720d11c-0e24-49a0-a705-500c8977b733___d868ae9a90eed8dbe78ac5a923a41780.webp" alt="">
             </div>
          </div>
 
          <div class="swiper-slide slide">
             <div class="content">
-               <span>order online</span>
-               <h3>chezzy hamburger</h3>
-               <a href="menu.php" class="btn">see menus</a>
+               <span>Primavera</span>
+               <h3>Edición Lino</h3>
+               <a href="menu.php" class="btn">Ver colección</a>
             </div>
             <div class="image">
-               <img src="images/home-img-2.png" alt="">
+               <img src="https://hmperu.vtexassets.com/assets/vtex.file-manager-graphql/images/428447af-6fd9-41c8-91a1-a26cca67f896___4997ea654ece0d1b45e77c2af31c0b8e.webp" alt="">
             </div>
          </div>
 
          <div class="swiper-slide slide">
             <div class="content">
-               <span>order online</span>
-               <h3>rosted chicken</h3>
-               <a href="menu.php" class="btn">see menus</a>
+               <span>Ropa de baño con volante</span>
+               <h3>Nueva edición niños</h3>
+               <a href="menu.php" class="btn">Ver colección</a>
             </div>
             <div class="image">
-               <img src="images/home-img-3.png" alt="">
+               <img src="https://hmperu.vtexassets.com/assets/vtex.file-manager-graphql/images/3daf2b32-4287-4dfb-822e-7408092dc9e5___59e01d315130fa40b6dbd2672532c05f.webp" alt="">
             </div>
          </div>
 
@@ -86,28 +86,28 @@ include 'components/add_cart.php';
 
 <section class="category">
 
-   <h1 class="title">food category</h1>
+   <h1 class="title">Categorías</h1>
 
    <div class="box-container">
 
       <a href="category.php?category=fast food" class="box">
          <img src="images/cat-1.png" alt="">
-         <h3>fast food</h3>
+         <h3>Mujer</h3>
       </a>
 
       <a href="category.php?category=main dish" class="box">
          <img src="images/cat-2.png" alt="">
-         <h3>main dishes</h3>
+         <h3>Hombre</h3>
       </a>
 
       <a href="category.php?category=drinks" class="box">
          <img src="images/cat-3.png" alt="">
-         <h3>drinks</h3>
+         <h3>Bebé</h3>
       </a>
 
       <a href="category.php?category=desserts" class="box">
          <img src="images/cat-4.png" alt="">
-         <h3>desserts</h3>
+         <h3>Niños</h3>
       </a>
 
    </div>
