@@ -74,18 +74,18 @@ if(isset($_POST['submit'])){
 <!-- header section ends -->
 
 <div class="heading">
-   <h3>checkout</h3>
+   <h3>Pagar</h3>
    <p><a href="home.php">home</a> <span> / checkout</span></p>
 </div>
 
 <section class="checkout">
 
-   <h1 class="title">order summary</h1>
+   <h1 class="title">Resumen de la compra</h1>
 
 <form action="" method="post">
 
    <div class="cart-items">
-      <h3>cart items</h3>
+      <h3>Artículos</h3>
       <?php
          $grand_total = 0;
          $cart_items[] = '';
@@ -101,10 +101,10 @@ if(isset($_POST['submit'])){
       <?php
             }
          }else{
-            echo '<p class="empty">your cart is empty!</p>';
+            echo '<p class="empty">Ninguna prenda agregada</p>';
          }
       ?>
-      <p class="grand-total"><span class="name">grand total :</span><span class="price">$<?= $grand_total; ?></span></p>
+      <p class="grand-total"><span class="name">Total:</span><span class="price">$<?= $grand_total; ?></span></p>
       <a href="cart.php" class="btn"> Revisar carrito </a>
    </div>
 
@@ -116,16 +116,16 @@ if(isset($_POST['submit'])){
    <input type="hidden" name="address" value="<?= $fetch_profile['address'] ?>">
 
    <div class="user-info">
-      <h3>your info</h3>
+      <h3>Datos</h3>
       <p><i class="fas fa-user"></i><span><?= $fetch_profile['name'] ?></span></p>
       <p><i class="fas fa-phone"></i><span><?= $fetch_profile['number'] ?></span></p>
       <p><i class="fas fa-envelope"></i><span><?= $fetch_profile['email'] ?></span></p>
-      <a href="update_profile.php" class="btn">update info</a>
-      <h3>delivery address</h3>
+      <a href="update_profile.php" class="btn">Actualizar</a>
+      <h3>Dirección de entrega</h3>
       <p><i class="fas fa-map-marker-alt"></i><span><?php if($fetch_profile['address'] == ''){echo 'please enter your address';}else{echo $fetch_profile['address'];} ?></span></p>
-      <a href="update_address.php" class="btn">update address</a>
+      <a href="update_address.php" class="btn">Actualizar</a>
       <select name="method" class="box" required>
-         <option value="" disabled selected>select payment method --</option>
+         <option value="" disabled selected>Método de pago</option>
          <option value="cash on delivery">cash on delivery</option>
          <option value="credit card">credit card</option>
          <option value="paytm">paytm</option>
