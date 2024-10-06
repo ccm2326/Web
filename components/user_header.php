@@ -20,11 +20,11 @@ if(isset($message)){
          <img src="images/logo.png" alt="logo">
       </a>
       <nav class="navbar">
-         <a href="home.php">home</a>
-         <a href="about.php">about</a>
-         <a href="menu.php">menu</a>
-         <a href="orders.php">orders</a>
-         <a href="contact.php">contact</a>
+         <a href="home.php">Inicio</a>
+         <a href="about.php">Acerca de</a>
+         <a href="menu.php">Colección</a>
+         <a href="orders.php">Pedidos</a>
+         <a href="contact.php">Contacto</a>
       </nav>
 
       <div class="icons">
