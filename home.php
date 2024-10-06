@@ -91,22 +91,22 @@ include 'components/add_cart.php';
    <div class="box-container">
 
       <a href="category.php?category=fast food" class="box">
-         <img src="images/cat-1.png" alt="">
+         <img src="https://hmperu.vtexassets.com/arquivos/ids/4221203-600-900?v=638419935270700000&width=600&height=900&aspect=true" alt="">
          <h3>Mujer</h3>
       </a>
 
       <a href="category.php?category=main dish" class="box">
-         <img src="images/cat-2.png" alt="">
+         <img src="https://hmperu.vtexassets.com/arquivos/ids/4540315-294-450?v=638536955227770000&width=294&height=450&aspect=true" alt="">
          <h3>Hombre</h3>
       </a>
 
       <a href="category.php?category=drinks" class="box">
-         <img src="images/cat-3.png" alt="">
+         <img src="https://hmperu.vtexassets.com/arquivos/ids/4473390-600-900?v=638507588853500000&width=600&height=900&aspect=true" alt="">
          <h3>Bebé</h3>
       </a>
 
       <a href="category.php?category=desserts" class="box">
-         <img src="images/cat-4.png" alt="">
+         <img src="https://hmperu.vtexassets.com/arquivos/ids/4237350-600-900?v=638420047141130000&width=600&height=900&aspect=true" alt="">
          <h3>Niños</h3>
       </a>
 

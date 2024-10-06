@@ -318,33 +318,30 @@ section{
 .category .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-   gap:2rem;
+   gap:1rem;
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
-.category .box-container .box{
-   border:var(--border);
-   padding:2rem;
+
+.category .box-container .box {
    text-align: center;
-   transition: var(--transition);
-   border: none;
+   /* transition: all 0.3s ease; */
+   padding: 0;
 }
 
-.category .box-container .box img{
+.category .box-container .box img {
    width: 100%;
-   height: 15rem;
-   object-fit: contain;
+   height: 30rem;
+   object-fit:scale-down;
 }
 
-.category .box-container .box h3{
-   font-size: 1.8rem;
-   margin-top: 1.5rem;
-   color:var(--black);
+.category .box-container .box h3 {
+   font-size: 1.4rem;
+   margin-top: 1rem;
+   color: #333;
    text-transform: uppercase;
-   letter-spacing: .1rem;
-}
-
-.category .box-container .box:hover{
-   box-shadow: var(--box-shadow);
+   letter-spacing: 0.05rem;
 }
 
 .products .box-container{
