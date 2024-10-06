@@ -1173,23 +1173,6 @@ section{
    color: var(--primary);
 }
 
-.loader{
-   position: fixed;
-   top: 0; 
-   left: 0; 
-   right: 0; 
-   bottom: 0;
-   z-index: 1000000;
-   background-color: var(--white);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
-.loader img{
-   height: 8rem;
-}
-
 /* Additional responsive styles */
 @media (max-width: 1200px) {
    .header .flex{
