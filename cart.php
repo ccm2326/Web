@@ -60,7 +60,7 @@ $grand_total = 0;
 <!-- header section ends -->
 
 <div class="heading">
-   <h3>shopping cart</h3>
+   <h3> Carrito de compras </h3>
    <p><a href="home.php">home</a> <span> / cart</span></p>
 </div>
 
@@ -68,7 +68,7 @@ $grand_total = 0;
 
 <section class="products">
 
-   <h1 class="title">your cart</h1>
+   <h1 class="title">Mi carrito</h1>
 
    <div class="box-container">
 
@@ -96,22 +96,22 @@ $grand_total = 0;
                $grand_total += $sub_total;
             }
          }else{
-            echo '<p class="empty">your cart is empty</p>';
+            echo '<p class="empty">Ninguna prenda agregada</p>';
          }
       ?>
 
    </div>
 
    <div class="cart-total">
-      <p>cart total : <span>$<?= $grand_total; ?></span></p>
-      <a href="checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">proceed to checkout</a>
+      <p>Total : <span>$<?= $grand_total; ?></span></p>
+      <a href="checkout.php" class="btn <?= ($grand_total > 1)?'':'disabled'; ?>">Comprar</a>
    </div>
 
    <div class="more-btn">
       <form action="" method="post">
-         <button type="submit" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>" name="delete_all" onclick="return confirm('delete all from cart?');">delete all</button>
+         <button type="submit" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>" name="delete_all" onclick="return confirm('delete all from cart?');">Eliminar todos</button>
       </form>
-      <a href="menu.php" class="btn">continue shopping</a>
+      <a href="menu.php" class="btn">Seguir comprando</a>
    </div>
 
 </section>

@@ -39,7 +39,7 @@ include 'components/add_cart.php';
 
 <section class="search-form">
    <form method="post" action="">
-      <input type="text" name="search_box" placeholder="search here..." class="box">
+      <input type="text" name="search_box" placeholder="Buscar productos" class="box">
       <button type="submit" name="search_btn" class="fas fa-search"></button>
    </form>
 </section>
@@ -77,7 +77,7 @@ include 'components/add_cart.php';
       <?php
             }
          }else{
-            echo '<p class="empty">no products added yet!</p>';
+            echo '<p class="empty">Aún no se han agregado productos</p>';
          }
       }
       ?>
