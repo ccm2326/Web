@@ -35,13 +35,13 @@ if(isset($_SESSION['user_id'])){
 <!-- header section ends -->
 
 <div class="heading">
-   <h3>orders</h3>
+   <h3>Pedidos</h3>
    <p><a href="html.php">home</a> <span> / orders</span></p>
 </div>
 
 <section class="orders">
 
-   <h1 class="title">your orders</h1>
+   <h1 class="title">Mis pedidos</h1>
 
    <div class="box-container">
 

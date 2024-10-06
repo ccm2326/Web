@@ -119,7 +119,7 @@ include 'components/add_cart.php';
 
 <section class="products">
 
-   <h1 class="title">latest dishes</h1>
+   <h1 class="title">Última temporada</h1>
 
    <div class="box-container">
 
@@ -154,7 +154,7 @@ include 'components/add_cart.php';
    </div>
 
    <div class="more-btn">
-      <a href="menu.php" class="btn">veiw all</a>
+      <a href="menu.php" class="btn">Ver</a>
    </div>
 
 </section>

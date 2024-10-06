@@ -36,7 +36,7 @@ include 'components/add_cart.php';
 <!-- header section ends -->
 
 <div class="heading">
-   <h3>our menu</h3>
+   <h3>Nuestra colección</h3>
    <p><a href="home.php">home</a> <span> / menu</span></p>
 </div>
 
@@ -44,7 +44,7 @@ include 'components/add_cart.php';
 
 <section class="products">
 
-   <h1 class="title">latest dishes</h1>
+   <h1 class="title">Última temporada</h1>
 
    <div class="box-container">
 
