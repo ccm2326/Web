@@ -61,7 +61,7 @@ include 'components/add_cart.php';
    <?php
          }
       }else{
-         echo '<p class="empty">no products added yet!</p>';
+         echo '<p class="empty">Aún no se han agregado productos</p>';
       }
    ?>
 
