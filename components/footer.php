@@ -1,39 +1,43 @@
 <footer class="footer">
 
    <section class="grid">
-
-      <div class="box">
-         <img src="images/email-icon.png" alt="">
-         <h3>our email</h3>
-         <a href="mailto:shaikhanas@gmail.com">shaikhanas@gmail.com</a>
-         <a href="mailto:anasbhai@gmail.com">anasbhai@gmail.com</a>
+      <div class="collections">
+         <h3>Colecciones</h3>
+         <a href="#">Mujer</a>
+         <a href="#">Hombre</a>
+         <a href="#">Bebé</a>
+         <a href="#">Niños</a>
+         <a href="#">H&M HOME</a>
+         <a href="#">Sport</a>
       </div>
 
-      <div class="box">
-         <img src="images/clock-icon.png" alt="">
-         <h3>opening hours</h3>
-         <p>00:07am to 00:10pm</p>
+      <div class="social-media">
+         <h3>Encuéntranos en</h3>
+         <div class="social-icons">
+            <a href="https://www.facebook.com/hmperu"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/hm/"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="https://x.com/hmperu?lang=es"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://www.youtube.com/user/hennesandmauritz"><img src="images/youtube.png" alt="YouTube"></a>
+            <a href="https://www.tiktok.com/@hm?lang=es"><img src="images/tiktok.png" alt="TikTok"></a>
+            <a href="https://www.linkedin.com/company/h&m/?originalSubdomain=es"><img src="images/linkedin.png" alt="LinkedIn"></a>
+         </div>
       </div>
 
-      <div class="box">
-         <img src="images/map-icon.png" alt="">
-         <h3>our address</h3>
-         <a href="#">mumbai, india - 400104</a>
+      <div class="subscribe">
+         <h3>Suscríbete para recibir ofertas exclusivas, promociones y noticias</h3>
+         <input type="email" placeholder="Tu dirección del Email">
+         <button>Suscribirse</button>
+         <input type="text" placeholder="Cuenta WhatsApp">
+         <button>Suscribirse</button>
       </div>
 
-      <div class="box">
-         <img src="images/phone-icon.png" alt="">
-         <h3>our number</h3>
-         <a href="tel:1234567890">123-456-7890</a>
-         <a href="tel:1112223333">111-222-3333</a>
+      <div class="app-icons">
+         <h3>App</h3>
+         <div class="app-links">
+            <a href="https://apps.apple.com/us/app/h-m-we-love-fashion/id834465911"><img src="images/apple.png" alt="Apple App Store"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.hm.oneteam&hl=en"><img src="images/android.png" alt="Google Play Store"></a>
+         </div>
       </div>
-
    </section>
 
-   <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span>mr. web designer</span> | all rights reserved!</div>
-
 </footer>
-
-<div class="loader">
-   <img src="images/loader.gif" alt="">
-</div>

@@ -23,14 +23,14 @@ if(isset($_POST['submit'])){
    $select_admin->execute([$name]);
    
    if($select_admin->rowCount() > 0){
-      $message[] = 'username already exists!';
+      $message[] = 'el nombre de ususario ya existe';
    }else{
       if($pass != $cpass){
-         $message[] = 'confirm passowrd not matched!';
+         $message[] = 'contraseña incorrecta';
       }else{
          $insert_admin = $conn->prepare("INSERT INTO `admin`(name, password) VALUES(?,?)");
          $insert_admin->execute([$name, $cpass]);
-         $message[] = 'new admin registered!';
+         $message[] = 'nuevo administrador registrado';
       }
    }
 
