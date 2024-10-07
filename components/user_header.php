@@ -48,8 +48,8 @@ if(isset($message)){
          ?>
          <p class="name"><?= $fetch_profile['name']; ?></p>
          <div class="flex">
-            <a href="profile.php" class="btn">profile</a>
-            <a href="components/user_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
+            <a href="profile.php" class="btn">Ver perfil</a>
+            <a href="components/user_logout.php" onclick="return confirm('¿Desea cerrar sesión?');" class="delete-btn">Cerrar sesión</a>
          </div>
          <p class="account">
             <a href="login.php">login</a> or
@@ -58,8 +58,8 @@ if(isset($message)){
          <?php
             }else{
          ?>
-            <p class="name">please login first!</p>
-            <a href="login.php" class="btn">login</a>
+            <p class="name">Inicia sesión primero</p>
+            <a href="login.php" class="btn">Iniciar sesión</a>
          <?php
           }
          ?>
