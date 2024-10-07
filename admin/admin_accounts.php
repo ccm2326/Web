@@ -25,7 +25,7 @@ if(isset($_GET['delete'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>admins accounts</title>
+   <title>administradores</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -42,13 +42,13 @@ if(isset($_GET['delete'])){
 
 <section class="accounts">
 
-   <h1 class="heading">admins account</h1>
+   <h1 class="heading">administradores</h1>
 
    <div class="box-container">
 
    <div class="box">
-      <p>register new admin</p>
-      <a href="register_admin.php" class="option-btn">register</a>
+      <p>registrar nuevo administrador</p>
+      <a href="register_admin.php" class="option-btn">registrarse</a>
    </div>
 
    <?php
@@ -58,13 +58,13 @@ if(isset($_GET['delete'])){
          while($fetch_accounts = $select_account->fetch(PDO::FETCH_ASSOC)){  
    ?>
    <div class="box">
-      <p> admin id : <span><?= $fetch_accounts['id']; ?></span> </p>
-      <p> username : <span><?= $fetch_accounts['name']; ?></span> </p>
+      <p> administrador id : <span><?= $fetch_accounts['id']; ?></span> </p>
+      <p> nombre de usuario : <span><?= $fetch_accounts['name']; ?></span> </p>
       <div class="flex-btn">
-         <a href="admin_accounts.php?delete=<?= $fetch_accounts['id']; ?>" class="delete-btn" onclick="return confirm('delete this account?');">delete</a>
+         <a href="admin_accounts.php?delete=<?= $fetch_accounts['id']; ?>" class="delete-btn" onclick="return confirm('¿eliminar esta cuenta?');">borrar</a>
          <?php
             if($fetch_accounts['id'] == $admin_id){
-               echo '<a href="update_profile.php" class="option-btn">update</a>';
+               echo '<a href="update_profile.php" class="option-btn">actualizar</a>';
             }
          ?>
       </div>
