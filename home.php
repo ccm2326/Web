@@ -47,7 +47,7 @@ include 'components/add_cart.php';
             <div class="content">
                <span>order online</span>
                <h3>delicious pizza</h3>
-               <a href="menu.html" class="btn">see menus</a>
+               <a href="menu.php" class="btn">see menus</a>
             </div>
             <div class="image">
                <img src="https://hmperu.vtexassets.com/assets/vtex.file-manager-graphql/images/5720d11c-0e24-49a0-a705-500c8977b733___d868ae9a90eed8dbe78ac5a923a41780.webp" alt="">
@@ -58,7 +58,7 @@ include 'components/add_cart.php';
             <div class="content">
                <span>order online</span>
                <h3>chezzy hamburger</h3>
-               <a href="menu.html" class="btn">see menus</a>
+               <a href="menu.php" class="btn">see menus</a>
             </div>
             <div class="image">
                <img src="https://hmperu.vtexassets.com/assets/vtex.file-manager-graphql/images/428447af-6fd9-41c8-91a1-a26cca67f896___4997ea654ece0d1b45e77c2af31c0b8e.webp" alt="">
@@ -69,7 +69,7 @@ include 'components/add_cart.php';
             <div class="content">
                <span>order online</span>
                <h3>rosted chicken</h3>
-               <a href="menu.html" class="btn">see menus</a>
+               <a href="menu.php" class="btn">see menus</a>
             </div>
             <div class="image">
                <img src="https://hmperu.vtexassets.com/assets/vtex.file-manager-graphql/images/3daf2b32-4287-4dfb-822e-7408092dc9e5___59e01d315130fa40b6dbd2672532c05f.webp" alt="">
@@ -154,7 +154,6 @@ include 'components/add_cart.php';
    </div>
 
    <div class="more-btn">
-      <a href="menu.php" class="btn">veiw all</a>
       <a href="menu.php" class="btn">Ver</a>
    </div>
 

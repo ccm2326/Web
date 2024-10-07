@@ -27,14 +27,14 @@
       <section class="flex">
             <a href="dashboard.php" class="logo">Admin<span>Panel</span></a>
 
-            <nav class="navbar">
-               <a href="dashboard.php">home</a>
-               <a href="products.php">products</a>
-               <a href="placed_orders.php">orders</a>
-               <a href="admin_accounts.php">admins</a>
-               <a href="users_accounts.php">users</a>
-               <a href="messages.php">messages</a>
-            </nav>
+      <nav class="navbar">
+         <a href="dashboard.php">Inicio</a>
+         <a href="products.php">Productos</a>
+         <a href="placed_orders.php">Pedidos</a>
+         <a href="admin_accounts.php">Administradores</a>
+         <a href="users_accounts.php">Usuarios</a>
+         <a href="messages.php">Mensajes</a>
+      </nav>
 
             <div class="icons">
                <div id="menu-btn" class="fas fa-bars"></div>
