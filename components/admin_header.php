@@ -60,9 +60,9 @@
    </header>
 
    <!-- Contenido Principal -->
-   <div class="main-content">
+   <div>
       <!-- Aquí va el contenido principal de tu página -->
-      <h1>Welcome to the Admin Panel</h1>
+      <!-- <h1>Welcome to the Admin Panel</h1> -->
       <!-- Más contenido aquí -->
    </div>
 

@@ -38,13 +38,13 @@ if(isset($_GET['delete'])){
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
-<body>
+<body class="main-content">
 
 <?php include '../components/admin_header.php' ?>
 
 <!-- user accounts section starts  -->
 
-<section class="accounts">
+<div class="container-2">
 
    <h1 class="heading">cuenta de usuario</h1>
 
@@ -57,8 +57,10 @@ if(isset($_GET['delete'])){
          while($fetch_accounts = $select_account->fetch(PDO::FETCH_ASSOC)){  
    ?>
    <div class="box">
-      <p> user id : <span><?= $fetch_accounts['id']; ?></span> </p>
-      <p> username : <span><?= $fetch_accounts['name']; ?></span> </p>
+      <p> User id : <span><?= $fetch_accounts['id']; ?></span> </p>
+      <p> Username : <span><?= $fetch_accounts['name']; ?></span> </p>
+      <p> Correo : <span><?= $fetch_accounts['email']; ?></span> </p>
+      <p> Teléfono : <span><?= $fetch_accounts['number']; ?></span> </p>
       <a href="users_accounts.php?delete=<?= $fetch_accounts['id']; ?>" class="delete-btn" onclick="return confirm('delete this account?');">borrar</a>
    </div>
    <?php
@@ -70,7 +72,7 @@ if(isset($_GET['delete'])){
 
    </div>
 
-</section>
+</div>
 
 <!-- user accounts section ends -->
 

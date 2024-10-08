@@ -34,23 +34,20 @@ if(isset($_GET['delete'])){
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
-<body>
+<body class="main-content">
 
 <?php include '../components/admin_header.php' ?>
 
 <!-- admins accounts section starts  -->
 
-<section class="accounts">
+<div class="container-2">
 
    <h1 class="heading">administradores</h1>
-
-   <div class="box-container">
-
-   <div class="box">
-      <p>registrar nuevo administrador</p>
-      <a href="register_admin.php" class="option-btn">registrarse</a>
+   <div class="">
+      <a href="register_admin.php" class="option-btn">Registrar Administrador</a>
    </div>
 
+   <div class="box-container" style="margin-top: 2em">
    <?php
       $select_account = $conn->prepare("SELECT * FROM `admin`");
       $select_account->execute();
@@ -78,7 +75,7 @@ if(isset($_GET['delete'])){
 
    </div>
 
-</section>
+</div>
 
 <!-- admins accounts section ends -->
 

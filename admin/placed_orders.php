@@ -11,12 +11,17 @@ if(!isset($admin_id)){
 };
 
 if(isset($_POST['update_payment'])){
-
-   $order_id = $_POST['order_id'];
-   $payment_status = $_POST['payment_status'];
-   $update_status = $conn->prepare("UPDATE `orders` SET payment_status = ? WHERE id = ?");
-   $update_status->execute([$payment_status, $order_id]);
-   $message[] = '¡Estado de pago actualizado!';
+   if (isset($_POST['payment_status']) && !empty($_POST['payment_status'])) {
+      $order_id = $_POST['order_id'];
+      $payment_status = $_POST['payment_status'];
+      
+      // Actualizamos el estado del pago en la base de datos
+      $update_status = $conn->prepare("UPDATE `orders` SET payment_status = ? WHERE id = ?");
+      $update_status->execute([$payment_status, $order_id]);
+      $message[] = '¡Estado de pago actualizado!';
+   } else {
+      $message[] = '¡Por favor, seleccione un estado de pago!';
+   }
 
 }
 
@@ -44,13 +49,13 @@ if(isset($_GET['delete'])){
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
-<body>
+<body class="main-content">
 
 <?php include '../components/admin_header.php' ?>
 
 <!-- placed orders section starts  -->
 
-<section class="placed-orders">
+<div class="container-2">
 
    <h1 class="heading">pedidos realizados</h1>
 
@@ -63,25 +68,25 @@ if(isset($_GET['delete'])){
          while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
    ?>
    <div class="box">
-      <p> usuario id : <span><?= $fetch_orders['user_id']; ?></span> </p>
-      <p> colocado en : <span><?= $fetch_orders['placed_on']; ?></span> </p>
-      <p> nombre : <span><?= $fetch_orders['name']; ?></span> </p>
-      <p> email : <span><?= $fetch_orders['email']; ?></span> </p>
-      <p> número : <span><?= $fetch_orders['number']; ?></span> </p>
-      <p> dirección : <span><?= $fetch_orders['address']; ?></span> </p>
-      <p> productos totales : <span><?= $fetch_orders['total_products']; ?></span> </p>
-      <p> precio total : <span>$<?= $fetch_orders['total_price']; ?>/-</span> </p>
-      <p> método de pago : <span><?= $fetch_orders['method']; ?></span> </p>
+      <h3 style="font-size: 1.8em">Pedido N° <?= $fetch_orders['id']; ?></h3>
+      <p> Usuario id : <span><?= $fetch_orders['user_id']; ?></span> </p>
+      <p> Colocado en : <span><?= $fetch_orders['placed_on']; ?></span> </p>
+      <p> Nombre : <span><?= $fetch_orders['name']; ?></span> </p>
+      <p> Email : <span><?= $fetch_orders['email']; ?></span> </p>
+      <p> Número : <span><?= $fetch_orders['number']; ?></span> </p>
+      <p> Dirección : <span><?= $fetch_orders['address']; ?></span> </p>
+      <p> Productos totales : <span><?= $fetch_orders['total_products']; ?></span> </p>
+      <p> Precio total : <span>$<?= $fetch_orders['total_price']; ?>/-</span> </p>
+      <p> Método de pago : <span><?= $fetch_orders['method']; ?></span> </p>
       <form action="" method="POST">
          <input type="hidden" name="order_id" value="<?= $fetch_orders['id']; ?>">
-         <select name="payment_status" class="drop-down">
-            <option value="" selected disabled><?= $fetch_orders['payment_status']; ?></option>
-            <option value="pendiente">pendiente</option>
-            <option value="completado">completado</option>
+         <select name="payment_status" class="box" required>
+            <option value="Pendiente" <?= ($fetch_orders['payment_status'] == 'Pendiente') ? 'selected' : '' ?>>Pendiente</option>
+            <option value="Completado" <?= ($fetch_orders['payment_status'] == 'Completado') ? 'selected' : '' ?>>Completado</option>
          </select>
          <div class="flex-btn">
-            <input type="submit" value="actualizar" class="btn" name="update_payment">
-            <a href="placed_orders.php?delete=<?= $fetch_orders['id']; ?>" class="delete-btn" onclick="return confirm('¿Eliminar este pedido?');">borrar</a>
+            <input type="submit" value="Actualizar" class="option-btn" name="update_payment">
+            <a href="placed_orders.php?delete=<?= $fetch_orders['id']; ?>" class="delete-btn" onclick="return confirm('¿Eliminar este pedido?');">Borrar</a>
          </div>
       </form>
    </div>
@@ -94,7 +99,7 @@ if(isset($_GET['delete'])){
 
    </div>
 
-</section>
+</div>
 
 <!-- placed orders section ends -->
 
