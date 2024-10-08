@@ -12,17 +12,14 @@ if(isset($_SESSION['user_id'])){
 };
 
 if(isset($_POST['submit'])){
-
-   $address = $_POST['flat'] .', '.$_POST['building'].', '.$_POST['area'].', '.$_POST['town'] .', '. $_POST['city'] .', '. $_POST['state'] .', '. $_POST['country'] .' - '. $_POST['pin_code'];
-   $address = filter_var($address, FILTER_SANITIZE_STRING);
+   $address = $_POST['calle'] .' '.$_POST['numero'].' '.$_POST['distrito'].' '.$_POST['provincia'] .', '. $_POST['departamento'];
 
    $update_address = $conn->prepare("UPDATE `users` set address = ? WHERE id = ?");
    $update_address->execute([$address, $user_id]);
 
-   $message[] = 'address saved!';
+   $message[] = 'Dirección guardada correctamente';
 
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -42,35 +39,17 @@ if(isset($_POST['submit'])){
 <section class="form-container">
    <form action="" method="post">
       <h3>Mi dirección</h3>
-      <input type="text" class="box" placeholder="flat no." required maxlength="50" name="flat">
-      <input type="text" class="box" placeholder="building no." required maxlength="50" name="building">
-      <input type="text" class="box" placeholder="area name" required maxlength="50" name="area">
-      <input type="text" class="box" placeholder="town name" required maxlength="50" name="town">
-      <input type="text" class="box" placeholder="city name" required maxlength="50" name="city">
-      <input type="text" class="box" placeholder="state name" required maxlength="50" name="state">
-      <input type="text" class="box" placeholder="country name" required maxlength="50" name="country">
-      <input type="number" class="box" placeholder="pin code" required max="999999" min="0" maxlength="6" name="pin_code">
+      <input type="text" class="box" placeholder="Departamento" required max length="50" name="departamento">
+      <input type="text" class="box" placeholder="Provincia" required max length="50" name="provincia">
+      <input type="text" class="box" placeholder="Distrito" required max length="50" name="distrito">
+      <input type="text" class="box" placeholder="Calle" required max length="50" name="calle">
+      <input type="text" class="box" placeholder="Número" required max length="10" name="numero">
+      <input type="submit" value="Guardar" name="submit" class="btn">
    </form>
 </section>
 
-
-
-
-
-
-
-
-
-
 <?php include 'components/footer.php' ?>
 
-
-
-
-
-
-
-<!-- custom js file link  -->
 <script src="js/script.js"></script>
 
 </body>

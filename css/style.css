@@ -438,7 +438,7 @@ section{
 .products .box-container .box .flex .price span{
    color:var(--light-color);
    font-size: 1.6rem;
-   text-decoration: line-through;
+   /* text-decoration: line-through; */
 }
 
 .products .box-container .box .flex .qty{
@@ -876,7 +876,7 @@ section{
 .product-details .price span{
    font-size: 1.8rem;
    color: var(--light-color);
-   text-decoration: line-through;
+   /* text-decoration: line-through; */
    margin-left: 1rem;
 }
 
