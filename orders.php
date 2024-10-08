@@ -14,45 +14,37 @@ if(isset($_SESSION['user_id'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
    <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>orders</title>
+   <title>Pedidos</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
-
 </head>
+
 <body>
-   
-<!-- header section starts  -->
+
 <?php include 'components/user_header.php'; ?>
-<!-- header section ends -->
 
 <div class="heading">
    <h3>Pedidos</h3>
-   <p><a href="html.php">home</a> <span> / orders</span></p>
+   <p><a href="home.php">Inicio</a> <span> / Pedidos</span></p>
 </div>
 
 <section class="orders">
-
    <h1 class="title">Mis pedidos</h1>
-
    <div class="box-container">
 
    <?php
       if($user_id == ''){
-         echo '<p class="empty">please login to see your orders</p>';
+         echo '<p class="empty">Inicia sesión para ver tus pedidos</p>';
       }else{
          $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE user_id = ?");
          $select_orders->execute([$user_id]);
          if($select_orders->rowCount() > 0){
-            while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
+            while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){ // Mientras que existan filas
    ?>
    <div class="box">
       <p>Fecha de pedido: <span><?= $fetch_orders['placed_on']; ?></span></p>
@@ -68,13 +60,11 @@ if(isset($_SESSION['user_id'])){
    <?php
       }
       }else{
-         echo '<p class="empty">no orders placed yet!</p>';
+         echo '<p class="empty">Aún no has realizado un pedido</p>';
       }
       }
    ?>
-
    </div>
-
 </section>
 
 
