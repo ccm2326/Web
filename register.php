@@ -64,7 +64,7 @@ if(isset($_POST['submit'])){
    <form action="" method="post">
       <h3>Registrate</h3>
       <input type="text" name="name" required placeholder="Ingresa tu nombre" class="box" maxlength="50">
-      <input type="email" name="email" required placeholder="Ingresa tu email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')"> // Elimina espacios en blanco
+      <input type="email" name="email" required placeholder="Ingresa tu email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')"> <!-- Elimina espacios en blanco-->
       <input type="number" name="number" required placeholder="Ingresa tu número" class="box" min="0" max="999999999" maxlength="9">
       <input type="password" name="pass" required placeholder="Ingresa tu contraseña" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="cpass" required placeholder="Confirma tu contraseña" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
