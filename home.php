@@ -90,22 +90,22 @@ include 'components/add_cart.php';
 
    <div class="box-container">
 
-      <a href="category.php?category=fast food" class="box">
+      <a href="category.php?category=mujer" class="box">
          <img src="https://hmperu.vtexassets.com/arquivos/ids/4221203-600-900?v=638419935270700000&width=600&height=900&aspect=true" alt="">
          <h3>Mujer</h3>
       </a>
 
-      <a href="category.php?category=main dish" class="box">
+      <a href="category.php?category=hombre" class="box">
          <img src="https://hmperu.vtexassets.com/arquivos/ids/4540315-294-450?v=638536955227770000&width=294&height=450&aspect=true" alt="">
          <h3>Hombre</h3>
       </a>
 
-      <a href="category.php?category=drinks" class="box">
+      <a href="category.php?category=bebes" class="box">
          <img src="https://hmperu.vtexassets.com/arquivos/ids/4473390-600-900?v=638507588853500000&width=600&height=900&aspect=true" alt="">
          <h3>Bebé</h3>
       </a>
 
-      <a href="category.php?category=desserts" class="box">
+      <a href="category.php?category=niño" class="box">
          <img src="https://hmperu.vtexassets.com/arquivos/ids/4237350-600-900?v=638420047141130000&width=600&height=900&aspect=true" alt="">
          <h3>Niños</h3>
       </a>
@@ -124,7 +124,7 @@ include 'components/add_cart.php';
    <div class="box-container">
 
       <?php
-         $select_products = $conn->prepare("SELECT * FROM `products` LIMIT 6");
+         $select_products = $conn->prepare("SELECT * FROM `products` ORDER BY `id` DESC LIMIT 4");
          $select_products->execute();
          if($select_products->rowCount() > 0){
             while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
