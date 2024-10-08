@@ -51,10 +51,6 @@ if(isset($_POST['send'])){
 
 <section class="contact">
    <div class="row">
-      <div class="image">
-         <img src="images/contact-img.svg" alt="">
-      </div>
-
       <form action="" method="post">
          <h3>Comunícate con nostros</h3>
          <input type="text" name="name" maxlength="50" class="box" placeholder="Nombre" required>

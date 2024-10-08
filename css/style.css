@@ -745,7 +745,7 @@ section{
 .user-details .user img{
    width: 100%;
    height: 20rem;
-   object-fit: cover;
+   object-fit:contain;
    margin-bottom: 1.5rem;
 }
 
