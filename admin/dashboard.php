@@ -48,8 +48,8 @@ if(!isset($admin_id)){
    <div class="box">
       <?php
          $total_pendings = 0;
-         $select_pendings = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
-         $select_pendings->execute(['pending']);
+         $select_pendings = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ? or payment_status = 'pending'");
+         $select_pendings->execute(['Pendiente']);
          while($fetch_pendings = $select_pendings->fetch(PDO::FETCH_ASSOC)){
             $total_pendings += $fetch_pendings['total_price'];
          }
@@ -63,7 +63,7 @@ if(!isset($admin_id)){
       <?php
          $total_completes = 0;
          $select_completes = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
-         $select_completes->execute(['completed']);
+         $select_completes->execute(['Completado']);
          while($fetch_completes = $select_completes->fetch(PDO::FETCH_ASSOC)){
             $total_completes += $fetch_completes['total_price'];
          }

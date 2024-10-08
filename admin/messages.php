@@ -34,13 +34,13 @@
       <link rel="stylesheet" href="../css/admin_style.css">
 
    </head>
-   <body>
+   <body class="main-content">
 
    <?php include '../components/admin_header.php' ?>
 
    <!-- messages section starts  -->
 
-   <section class="messages">
+   <div class="container-2">
 
       <h1 class="heading">mensajes</h1>
 
@@ -53,11 +53,12 @@
             while($fetch_messages = $select_messages->fetch(PDO::FETCH_ASSOC)){
       ?>
       <div class="box">
-         <p> nombre : <span><?= $fetch_messages['name']; ?></span> </p>
-         <p> número : <span><?= $fetch_messages['number']; ?></span> </p>
-         <p> email : <span><?= $fetch_messages['email']; ?></span> </p>
-         <p> mensaje : <span><?= $fetch_messages['message']; ?></span> </p>
-         <a href="messages.php?delete=<?= $fetch_messages['id']; ?>" class="delete-btn" onclick="return confirm('¿Borrar este mensaje?');">borrar</a>
+         <h3 style="font-size: 1.8em">Mensaje N° <?= $fetch_messages['id']; ?></h3>
+         <p> Nombre : <span><?= $fetch_messages['name']; ?></span> </p>
+         <p> Número : <span><?= $fetch_messages['number']; ?></span> </p>
+         <p> Email : <span><?= $fetch_messages['email']; ?></span> </p>
+         <p> Mensaje : <span><?= $fetch_messages['message']; ?></span> </p>
+         <a href="messages.php?delete=<?= $fetch_messages['id']; ?>" class="delete-btn" onclick="return confirm('¿Borrar este mensaje?');">Borrar</a>
       </div>
       <?php
             }
@@ -68,7 +69,7 @@
 
       </div>
 
-   </section>
+      </div>
 
    <!-- messages section ends -->
 
