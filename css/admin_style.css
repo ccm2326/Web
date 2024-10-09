@@ -446,7 +446,7 @@ p {
 }
 
 @media (max-width: 768px) {
-   #menu-btn { display: inline-block; }
+   #collection-btn { display: inline-block; }
    .header .flex .navbar {
       position: absolute;
       top: 100%; left: 0; right: 0;

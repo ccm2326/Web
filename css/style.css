@@ -224,7 +224,7 @@ section{
    font-size: 1.4rem;
 }
 
-#menu-btn{
+#collection-btn{
    display: none;
 }
 
@@ -1122,7 +1122,7 @@ section{
 }
 
 @media (max-width: 768px) {
-   #menu-btn{
+   #collection-btn{
       display: inline-block;
    }
    

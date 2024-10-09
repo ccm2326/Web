@@ -37,7 +37,7 @@
       </nav>
 
             <div class="icons">
-               <div id="menu-btn" class="fas fa-bars"></div>
+               <div id="collection-btn" class="fas fa-bars"></div>
                <div id="user-btn" class="fas fa-user"></div>
             </div>
 

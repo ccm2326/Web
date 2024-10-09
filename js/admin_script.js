@@ -7,7 +7,7 @@ document.querySelector('#user-btn').onclick = () =>{
 
 let navbar = document.querySelector('.header .flex .navbar');
 
-document.querySelector('#menu-btn').onclick = () =>{
+document.querySelector('#collection-btn').onclick = () =>{
    navbar.classList.toggle('active');
    profile.classList.remove('active');
 }

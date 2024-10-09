@@ -14,7 +14,6 @@ if(isset($message)){
 <header class="header">
 
    <section class="flex">
-
       <a href="home.php" class="logo">
          <img src="images/logo.png" alt="logo">
       </a>
@@ -34,7 +33,7 @@ if(isset($message)){
          <a href="search.php"><i class="fas fa-search"></i></a>
          <a href="cart.php"><i class="fas fa-shopping-cart"></i><span>(<?= $total_cart_items; ?>)</span></a>
          <div id="user-btn" class="fas fa-user"></div>
-         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="collection-btn" class="fas fa-bars"></div>
       </div>
 
       <div class="profile">
