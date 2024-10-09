@@ -937,7 +937,6 @@ section{
 
 
 
-
 .footer {
    background-color: #f2f2f2;
    padding: 20px;
@@ -959,8 +958,6 @@ section{
 }
 
 .footer .collections a,
-.footer .subscribe input,
-.footer .subscribe button,
 .footer .social-icons a {
    display: block;
    margin-bottom: 10px;
@@ -979,24 +976,7 @@ section{
    height: 30px;
 }
 
-.footer .subscribe input[type="email"],
-.footer .subscribe input[type="text"] {
-   width: 80%;
-   padding: 8px;
-   border: 1px solid #ccc;
-   border-radius: 5px;
-   margin-bottom: 10px;
-}
 
-.footer .subscribe button {
-   padding: 8px 12px;
-   background-color: #000;
-   color: #fff;
-   border: none;
-   cursor: pointer;
-   width: 80%;
-   text-align: center;
-}
 
 .footer .app-links {
    display: flex;
@@ -1019,6 +999,9 @@ section{
       grid-template-columns: 1fr;
    }
 }
+
+
+
 
 
 .credit{
