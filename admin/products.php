@@ -13,14 +13,10 @@ if(!isset($admin_id)){
 if(isset($_POST['add_product'])){
 
    $name = $_POST['name'];
-   $name = filter_var($name, FILTER_SANITIZE_STRING);
    $price = $_POST['price'];
-   $price = filter_var($price, FILTER_SANITIZE_STRING);
    $category = $_POST['category'];
-   $category = filter_var($category, FILTER_SANITIZE_STRING);
 
    $image = $_FILES['image']['name'];
-   $image = filter_var($image, FILTER_SANITIZE_STRING);
    $image_size = $_FILES['image']['size'];
    $image_tmp_name = $_FILES['image']['tmp_name'];
    $image_folder = '../uploaded_img/'.$image;
@@ -124,7 +120,7 @@ if(isset($_GET['delete'])){
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>productos</title>
 

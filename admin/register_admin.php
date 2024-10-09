@@ -13,11 +13,8 @@ if(!isset($admin_id)){
 if(isset($_POST['submit'])){
 
    $name = $_POST['name'];
-   $name = filter_var($name, FILTER_SANITIZE_STRING);
    $pass = sha1($_POST['pass']);
-   $pass = filter_var($pass, FILTER_SANITIZE_STRING);
    $cpass = sha1($_POST['cpass']);
-   $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
 
    $select_admin = $conn->prepare("SELECT * FROM `admin` WHERE name = ?");
    $select_admin->execute([$name]);
@@ -42,7 +39,7 @@ if(isset($_POST['submit'])){
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>registro</title>
 

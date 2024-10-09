@@ -13,7 +13,6 @@ if(!isset($admin_id)){
 if(isset($_POST['submit'])){
 
    $name = $_POST['name'];
-   $name = filter_var($name, FILTER_SANITIZE_STRING);
 
    if(!empty($name)){
       $select_name = $conn->prepare("SELECT * FROM `admin` WHERE name = ?");
@@ -32,11 +31,8 @@ if(isset($_POST['submit'])){
    $fetch_prev_pass = $select_old_pass->fetch(PDO::FETCH_ASSOC);
    $prev_pass = $fetch_prev_pass['password'];
    $old_pass = sha1($_POST['old_pass']);
-   $old_pass = filter_var($old_pass, FILTER_SANITIZE_STRING);
    $new_pass = sha1($_POST['new_pass']);
-   $new_pass = filter_var($new_pass, FILTER_SANITIZE_STRING);
    $confirm_pass = sha1($_POST['confirm_pass']);
-   $confirm_pass = filter_var($confirm_pass, FILTER_SANITIZE_STRING);
 
    if($old_pass != $empty_pass){
       if($old_pass != $prev_pass){
@@ -62,7 +58,7 @@ if(isset($_POST['submit'])){
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>actualizar perfil</title>
 
