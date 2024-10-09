@@ -101,7 +101,7 @@ $grand_total = 0;
       <form action="" method="post">
          <button type="submit" class="delete-btn <?= ($grand_total > 1)?'':'disabled'; ?>" name="delete_all" onclick="return confirm('¿Eliminar todos los artículos?');">Eliminar todos</button>
       </form>
-      <a href="menu.php" class="btn">Seguir comprando</a>
+      <a href="collection.php" class="btn">Seguir comprando</a>
    </div>
 
 </section>

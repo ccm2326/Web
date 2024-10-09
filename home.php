@@ -35,7 +35,7 @@ include 'components/add_cart.php';
       <div class="content">
          <span>Camisa de Lino</span>
          <h3>Edición Costa</h3>
-         <a href="menu.php" class="btn">Ver colección</a>
+         <a href="collection.php" class="btn">Ver colección</a>
       </div>
       <div class="image">
          <img src="https://hmperu.vtexassets.com/assets/vtex.file-manager-graphql/images/5720d11c-0e24-49a0-a705-500c8977b733___d868ae9a90eed8dbe78ac5a923a41780.webp" alt="">
@@ -110,7 +110,7 @@ include 'components/add_cart.php';
    </div>
 
    <div class="more-btn">
-      <a href="menu.php" class="btn">Ver</a>
+      <a href="collection.php" class="btn">Ver</a>
    </div>
 </section>
 
