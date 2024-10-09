@@ -23,14 +23,6 @@
          </div>
       </div>
 
-      <div class="subscribe">
-         <h3>Suscríbete para recibir ofertas exclusivas, promociones y noticias</h3>
-         <input type="email" placeholder="Tu dirección del Email">
-         <button>Suscribirse</button>
-         <input type="text" placeholder="Cuenta WhatsApp">
-         <button>Suscribirse</button>
-      </div>
-
       <div class="app-icons">
          <h3>App</h3>
          <div class="app-links">
