@@ -51,8 +51,8 @@ if(isset($message)){
             <a href="components/user_logout.php" onclick="return confirm('¿Desea cerrar sesión?');" class="delete-btn">Cerrar sesión</a>
          </div>
          <p class="account">
-            <a href="login.php">login</a> or
-            <a href="register.php">register</a>
+            <a href="login.php">Iniciar sesión</a> or
+            <a href="register.php">Registrarse</a>
          </p> 
          <?php
             }else{
