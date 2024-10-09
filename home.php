@@ -15,25 +15,20 @@ include 'components/add_cart.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>home</title>
+   <title>Inicio</title>
 
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
 <?php include 'components/user_header.php'; ?>
-
 
 
 <section class="hero">
@@ -74,7 +69,6 @@ include 'components/add_cart.php';
                <img src="https://hmperu.vtexassets.com/assets/vtex.file-manager-graphql/images/3daf2b32-4287-4dfb-822e-7408092dc9e5___59e01d315130fa40b6dbd2672532c05f.webp" alt="">
             </div>
          </div>
-
       </div>
 
       <div class="swiper-pagination"></div>
@@ -114,8 +108,6 @@ include 'components/add_cart.php';
 </section>
 
 
-
-
 <section class="products">
 
    <h1 class="title">Última temporada</h1>
@@ -139,7 +131,7 @@ include 'components/add_cart.php';
          <a href="category.php?category=<?= $fetch_products['category']; ?>" class="cat"><?= $fetch_products['category']; ?></a>
          <div class="name"><?= $fetch_products['name']; ?></div>
          <div class="flex">
-            <div class="price"><span>$</span><?= $fetch_products['price']; ?></div>
+            <div class="price"><span>S/.</span><?= $fetch_products['price']; ?></div>
             <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2">
          </div>
       </form>
@@ -177,10 +169,8 @@ include 'components/add_cart.php';
 
 <?php include 'components/footer.php'; ?>
 
-
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-<!-- custom js file link  -->
 <script src="js/script.js"></script>
 
 <script>

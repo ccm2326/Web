@@ -15,32 +15,25 @@ include 'components/add_cart.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
    <meta charset="UTF-8">
    
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>menu</title>
+   <title>Colección</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
    
-<!-- header section starts  -->
 <?php include 'components/user_header.php'; ?>
-<!-- header section ends -->
 
 <div class="heading">
    <h3>Nuestra colección</h3>
-   <p><a href="home.php">home</a> <span> / menu</span></p>
+   <p><a href="home.php">Inicio</a> <span> / Colección</span></p>
 </div>
-
-<!-- menu section starts  -->
 
 <section class="products">
 
@@ -65,7 +58,7 @@ include 'components/add_cart.php';
          <a href="category.php?category=<?= $fetch_products['category']; ?>" class="cat"><?= $fetch_products['category']; ?></a>
          <div class="name"><?= $fetch_products['name']; ?></div>
          <div class="flex">
-            <div class="price"><span>$</span><?= $fetch_products['price']; ?></div>
+            <div class="price"><span>S/.</span><?= $fetch_products['price']; ?></div>
             <input type="number" name="qty" class="qty" min="1" max="99" value="1" maxlength="2"">
          </div>
       </form>
@@ -81,43 +74,8 @@ include 'components/add_cart.php';
 </section>
 
 
-<!-- menu section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- footer section starts  -->
 <?php include 'components/footer.php'; ?>
-<!-- footer section ends -->
 
-
-
-
-
-
-
-
-<!-- custom js file link  -->
 <script src="js/script.js"></script>
 
 </body>
