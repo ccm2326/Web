@@ -1,6 +1,6 @@
    <?php
 
-   include '../components/connect.php';
+   include '../utilities/connect.php';
 
    session_start();
 
@@ -36,7 +36,7 @@
    </head>
    <body class="main-content">
 
-   <?php include '../components/admin_header.php' ?>
+   <?php include '../utilities/admin_header.php' ?>
 
    <!-- messages section starts  -->
 

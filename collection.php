@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+include 'utilities/connect.php';
 
 session_start();
 
@@ -10,7 +10,7 @@ if(isset($_SESSION['user_id'])){
    $user_id = '';
 };
 
-include 'components/add_cart.php';
+include 'utilities/add_cart.php';
 
 ?>
 
@@ -28,7 +28,7 @@ include 'components/add_cart.php';
 </head>
 <body>
    
-<?php include 'components/user_header.php'; ?>
+<?php include 'utilities/user_header.php'; ?>
 
 <div class="heading">
    <h3>Nuestra colección</h3>
@@ -74,7 +74,7 @@ include 'components/add_cart.php';
 </section>
 
 
-<?php include 'components/footer.php'; ?>
+<?php include 'utilities/footer.php'; ?>
 
 <script src="js/script.js"></script>
 

@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+include 'utilities/connect.php';
 
 session_start();
 
@@ -26,7 +26,7 @@ if(isset($_SESSION['user_id'])){
 
 <body>
 
-<?php include 'components/user_header.php'; ?>
+<?php include 'utilities/user_header.php'; ?>
 
 <div class="heading">
    <h3>Pedidos</h3>
@@ -67,7 +67,7 @@ if(isset($_SESSION['user_id'])){
    </div>
 </section>
 
-<?php include 'components/footer.php'; ?>
+<?php include 'utilities/footer.php'; ?>
 <script src="js/script.js"></script>
 
 </body>

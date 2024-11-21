@@ -1,6 +1,6 @@
 <?php
 
-include '../components/connect.php';
+include '../utilities/connect.php';
 
 session_start();
 
@@ -40,7 +40,7 @@ if(isset($_GET['delete'])){
 </head>
 <body class="main-content">
 
-<?php include '../components/admin_header.php' ?>
+<?php include '../utilities/admin_header.php' ?>
 
 <!-- user accounts section starts  -->
 

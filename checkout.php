@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+include 'utilities/connect.php';
 
 session_start();
 
@@ -46,7 +46,7 @@ if(isset($_POST['submit'])){
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Pago</title>
+   <title>Pagar</title>
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
    <link rel="stylesheet" href="css/style.css">
@@ -54,7 +54,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 
-<?php include 'components/user_header.php'; ?>
+<?php include 'utilities/user_header.php'; ?>
 
 <div class="heading">
    <h3>Pagar</h3>
@@ -70,17 +70,17 @@ if(isset($_POST['submit'])){
    <div class="cart-items">
       <h3>Artículos</h3>
       <?php
-         $grand_total = 0;
-         $cart_items[] = '';
+         $grand_total = 0; // Total de la compra
+         $cart_items[] = ''; // Almacena los productos del carrito
          $select_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
          $select_cart->execute([$user_id]);
-         if($select_cart->rowCount() > 0){
+         if($select_cart->rowCount() > 0){ // Verifica si el carrito tiene algún producto
             while($fetch_cart = $select_cart->fetch(mode: PDO::FETCH_ASSOC)){
-               $cart_items[] = $fetch_cart['name'].' ('.$fetch_cart['price'].' x '. $fetch_cart['quantity'].') - '; // Añade un elemento al array []
-               $total_products = implode($cart_items); // Convertir en cadena 
+               $cart_items[] = $fetch_cart['name'].' ('.$fetch_cart['price'].' x '. $fetch_cart['quantity'].') - '; // Añade un elemento al array [] -> Producto A (10 x 2)
+               $total_products = implode($cart_items); // Convertir en cadena todo el array
                $grand_total += ($fetch_cart['price'] * $fetch_cart['quantity']);
       ?>
-      <!-- Mostrar todas las prendas -->
+      <!-- Mostrar cada prenda -->
       <p><span class="name"><?= $fetch_cart['name']; ?></span><span class="price">S/.<?= $fetch_cart['price']; ?> x <?= $fetch_cart['quantity']; ?></span></p>
       <?php
             }
@@ -100,15 +100,19 @@ if(isset($_POST['submit'])){
    <input type="hidden" name="address" value="<?= $fetch_profile['address'] ?>">
 
    <div class="user-info">
+      <!-- DATOS -->
       <h3>Datos</h3>
       <p><i class="fas fa-user"></i><span><?= $fetch_profile['name'] ?></span></p>
       <p><i class="fas fa-phone"></i><span><?= $fetch_profile['number'] ?></span></p>
       <p><i class="fas fa-envelope"></i><span><?= $fetch_profile['email'] ?></span></p>
       <a href="update_profile.php" class="btn">Actualizar</a>
       
+      <!-- DIRECCIÓN -->
       <h3>Dirección de entrega</h3>
       <p><i class="fas fa-map-marker-alt"></i><span><?php if($fetch_profile['address'] == ''){echo 'Actualice su dirección';}else{echo $fetch_profile['address'];} ?></span></p>
       <a href="update_address.php" class="btn">Actualizar</a>
+
+      <!-- MÉTODO DE PAGO -->
       <select name="method" class="box" required>
          <option value="" disabled selected>Método de pago</option>
          <option value="tarjeta de crédito">Tarjeta de crédito</option>
@@ -121,7 +125,7 @@ if(isset($_POST['submit'])){
    
 </section>
 
-<?php include 'components/footer.php'; ?>
+<?php include 'utilities/footer.php'; ?>
 
 <script src="js/script.js"></script>
 
