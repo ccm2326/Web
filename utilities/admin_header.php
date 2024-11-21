@@ -4,8 +4,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Admin Panel</title>
-   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> <!-- Asegúrate de incluir Font Awesome -->
-   <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de incluir tu CSS -->
+   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> 
+   <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
    <!-- Mensajes -->
@@ -48,12 +48,12 @@
                $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
                ?>
                <p><?= $fetch_profile['name']; ?></p>
-               <a href="update_profile.php" class="btn">update profile</a>
+               <a href="update_profile.php" class="btn">Actualizar perfil</a>
                <div class="flex-btn">
-                  <a href="admin_login.php" class="option-btn">login</a>
-                  <a href="register_admin.php" class="option-btn">register</a>
+                  <a href="admin_login.php" class="option-btn">Iniciar sesión</a>
+                  <a href="register_admin.php" class="option-btn">Registrarse</a>
                </div>
-               <a href="../utilities/admin_logout.php" onclick="return confirm('¿Desea cerrar sesión?');" class="delete-btn">logout</a>
+               <a href="../utilities/admin_logout.php" onclick="return confirm('¿Desea cerrar sesión?');" class="delete-btn">Cerrar sesión</a>
             </div>
 
       </section>

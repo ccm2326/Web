@@ -18,12 +18,9 @@ if(!isset($admin_id)){
    <meta charset="UTF-8">
    
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>panel</title>
+   <title>Panel</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
@@ -31,18 +28,16 @@ if(!isset($admin_id)){
 
 <?php include '../utilities/admin_header.php' ?>
 
-<!-- admin dashboard section starts  -->
-
 <section class="dashboard">
 
-   <h1 class="heading">panel</h1>
+   <h1 class="heading">Panel</h1>
 
    <div class="box-container">
 
    <div class="box">
-      <h3>¡bienvenid@!</h3>
+      <h3>¡Bienvenid@!</h3>
       <p><?= $fetch_profile['name']; ?></p>
-      <a href="update_profile.php" class="btn">actualizar perfil</a>
+      <a href="update_profile.php" class="btn">Actualizar perfil</a>
    </div>
 
    <div class="box">
@@ -55,8 +50,8 @@ if(!isset($admin_id)){
          }
       ?>
       <h3><span>$</span><?= $total_pendings; ?><span>/-</span></h3>
-      <p>pendientes totales</p>
-      <a href="placed_orders.php" class="btn">ver pedidos</a>
+      <p>Pendientes totales</p>
+      <a href="placed_orders.php" class="btn">Ver pedidos</a>
    </div>
 
    <div class="box">
@@ -69,8 +64,8 @@ if(!isset($admin_id)){
          }
       ?>
       <h3><span>$</span><?= $total_completes; ?><span>/-</span></h3>
-      <p>total completado</p>
-      <a href="placed_orders.php" class="btn">ver pedidos</a>
+      <p>Total completado</p>
+      <a href="placed_orders.php" class="btn">Ver pedidos</a>
    </div>
 
    <div class="box">
@@ -80,8 +75,8 @@ if(!isset($admin_id)){
          $numbers_of_orders = $select_orders->rowCount();
       ?>
       <h3><?= $numbers_of_orders; ?></h3>
-      <p>pedidos totales</p>
-      <a href="placed_orders.php" class="btn">ver pedidos</a>
+      <p>Pedidos totales</p>
+      <a href="placed_orders.php" class="btn">Ver pedidos</a>
    </div>
 
    <div class="box">
@@ -91,8 +86,8 @@ if(!isset($admin_id)){
          $numbers_of_products = $select_products->rowCount();
       ?>
       <h3><?= $numbers_of_products; ?></h3>
-      <p>productos añadidos</p>
-      <a href="products.php" class="btn">ver productos</a>
+      <p>Productos añadidos</p>
+      <a href="products.php" class="btn">Ver productos</a>
    </div>
 
    <div class="box">
@@ -102,7 +97,7 @@ if(!isset($admin_id)){
          $numbers_of_users = $select_users->rowCount();
       ?>
       <h3><?= $numbers_of_users; ?></h3>
-      <p>cuentas de usuarios</p>
+      <p>Cuentas de usuarios</p>
       <a href="users_accounts.php" class="btn">Ver usuarios</a>
    </div>
 
@@ -113,7 +108,7 @@ if(!isset($admin_id)){
          $numbers_of_admins = $select_admins->rowCount();
       ?>
       <h3><?= $numbers_of_admins; ?></h3>
-      <p>admins</p>
+      <p>Administradores</p>
       <a href="admin_accounts.php" class="btn">Ver administradores</a>
    </div>
 
@@ -124,25 +119,14 @@ if(!isset($admin_id)){
          $numbers_of_messages = $select_messages->rowCount();
       ?>
       <h3><?= $numbers_of_messages; ?></h3>
-      <p>nuevos mensajes</p>
-      <a href="messages.php" class="btn">ver mensajes</a>
+      <p>Nuevos mensajes</p>
+      <a href="messages.php" class="btn">Ver mensajes</a>
    </div>
 
    </div>
 
 </section>
 
-<!-- admin dashboard section ends -->
-
-
-
-
-
-
-
-
-
-<!-- custom js file link  -->
 <script src="../js/admin_script.js"></script>
 
 </body>

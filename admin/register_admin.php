@@ -20,14 +20,14 @@ if(isset($_POST['submit'])){
    $select_admin->execute([$name]);
    
    if($select_admin->rowCount() > 0){
-      $message[] = 'el nombre de ususario ya existe';
+      $message[] = 'El nombre de ususario ya existe';
    }else{
       if($pass != $cpass){
-         $message[] = 'contraseña incorrecta';
+         $message[] = 'Contraseña incorrecta';
       }else{
          $insert_admin = $conn->prepare("INSERT INTO `admin`(name, password) VALUES(?,?)");
          $insert_admin->execute([$name, $cpass]);
-         $message[] = 'nuevo administrador registrado';
+         $message[] = 'Nuevo administrador registrado';
       }
    }
 
@@ -41,12 +41,9 @@ if(isset($_POST['submit'])){
    <meta charset="UTF-8">
    
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>registro</title>
+   <title>Registro</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
@@ -54,12 +51,11 @@ if(isset($_POST['submit'])){
 
 <?php include '../utilities/admin_header.php' ?>
 
-<!-- register admin section starts  -->
 
 <section class="form-container">
 
    <form action="" method="POST">
-      <h3>registrar nuevo administrador</h3>
+      <h3>Registrar nuevo administrador</h3>
       <input type="text" name="name" maxlength="20" required placeholder="Ingrese su nombre de usuario" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="pass" maxlength="20" required placeholder="Ingrese su contraseña" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="cpass" maxlength="20" required placeholder="Confirma tu contraseña" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
@@ -68,24 +64,6 @@ if(isset($_POST['submit'])){
 
 </section>
 
-<!-- register admin section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- custom js file link  -->
 <script src="../js/admin_script.js"></script>
 
 </body>

@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
       $select_name = $conn->prepare("SELECT * FROM `admin` WHERE name = ?");
       $select_name->execute([$name]);
       if($select_name->rowCount() > 0){
-         $message[] = '¡el nombre de usuario ya está tomado!';
+         $message[] = '¡El nombre de usuario ya está en uso!';
       }else{
          $update_name = $conn->prepare("UPDATE `admin` SET name = ? WHERE id = ?");
          $update_name->execute([$name, $admin_id]);
@@ -36,16 +36,16 @@ if(isset($_POST['submit'])){
 
    if($old_pass != $empty_pass){
       if($old_pass != $prev_pass){
-         $message[] = '¡la contraseña anterior no coincide!';
+         $message[] = '¡La contraseña anterior no coincide!';
       }elseif($new_pass != $confirm_pass){
-         $message[] = '¡Confirmar contraseña no coincidente!';
+         $message[] = '¡La contraseña de confirmación no coincide';
       }else{
          if($new_pass != $empty_pass){
             $update_pass = $conn->prepare("UPDATE `admin` SET password = ? WHERE id = ?");
             $update_pass->execute([$confirm_pass, $admin_id]);
-            $message[] = '¡contraseña actualizada exitosamente!';
+            $message[] = '¡Contraseña actualizada exitosamente!';
          }else{
-            $message[] = '¡por favor introduzca una nueva contraseña!';
+            $message[] = '¡Introduzca una nueva contraseña!';
          }
       }
    }
@@ -60,12 +60,9 @@ if(isset($_POST['submit'])){
    <meta charset="UTF-8">
    
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>actualizar perfil</title>
+   <title>Actualizar perfil</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
@@ -73,32 +70,19 @@ if(isset($_POST['submit'])){
 
 <?php include '../utilities/admin_header.php' ?>
 
-<!-- admin profile update section starts  -->
-
 <section class="form-container">
 
    <form action="" method="POST">
       <h3>actualizar perfil</h3>
       <input type="text" name="name" maxlength="20" class="box" oninput="this.value = this.value.replace(/\s/g, '')" placeholder="<?= $fetch_profile['name']; ?>">
-      <input type="password" name="old_pass" maxlength="20" placeholder="ingrese su contraseña anterior" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="new_pass" maxlength="20" placeholder="ingrese su nueva contraseña" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="confirm_pass" maxlength="20" placeholder="confirma tu nueva contraseña" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="old_pass" maxlength="20" placeholder="Ingrese su contraseña anterior" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="new_pass" maxlength="20" placeholder="Ingrese su nueva contraseña" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="confirm_pass" maxlength="20" placeholder="Confirma tu nueva contraseña" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="actualizar ahora" name="submit" class="btn">
    </form>
 
 </section>
 
-<!-- admin profile update section ends -->
-
-
-
-
-
-
-
-
-
-<!-- custom js file link  -->
 <script src="../js/admin_script.js"></script>
 
 </body>

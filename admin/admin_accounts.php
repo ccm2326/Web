@@ -25,12 +25,9 @@ if(isset($_GET['delete'])){
    <meta charset="UTF-8">
    
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>administradores</title>
+   <title>Administradores</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
@@ -38,11 +35,9 @@ if(isset($_GET['delete'])){
 
 <?php include '../utilities/admin_header.php' ?>
 
-<!-- admins accounts section starts  -->
-
 <div class="container-2">
 
-   <h1 class="heading">administradores</h1>
+   <h1 class="heading">Administradores</h1>
    <div class="">
       <a href="register_admin.php" class="option-btn">Registrar Administrador</a>
    </div>
@@ -55,13 +50,13 @@ if(isset($_GET['delete'])){
          while($fetch_accounts = $select_account->fetch(PDO::FETCH_ASSOC)){  
    ?>
    <div class="box">
-      <p> administrador id : <span><?= $fetch_accounts['id']; ?></span> </p>
-      <p> nombre de usuario : <span><?= $fetch_accounts['name']; ?></span> </p>
+      <p> ID administrador: <span><?= $fetch_accounts['id']; ?></span> </p>
+      <p> Nombre de usuario : <span><?= $fetch_accounts['name']; ?></span> </p>
       <div class="flex-btn">
-         <a href="admin_accounts.php?delete=<?= $fetch_accounts['id']; ?>" class="delete-btn" onclick="return confirm('¿eliminar esta cuenta?');">borrar</a>
+         <a href="admin_accounts.php?delete=<?= $fetch_accounts['id']; ?>" class="delete-btn" onclick="return confirm('¿Eliminar esta cuenta?');">Borrar</a>
          <?php
             if($fetch_accounts['id'] == $admin_id){
-               echo '<a href="update_profile.php" class="option-btn">actualizar</a>';
+               echo '<a href="update_profile.php" class="option-btn">Actualizar</a>';
             }
          ?>
       </div>
@@ -77,28 +72,6 @@ if(isset($_GET['delete'])){
 
 </div>
 
-<!-- admins accounts section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- custom js file link  -->
 <script src="../js/admin_script.js"></script>
 
 </body>

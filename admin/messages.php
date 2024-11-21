@@ -25,12 +25,9 @@
       <meta charset="UTF-8">
       
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>mensajes</title>
+      <title>Mensajes</title>
 
-      <!-- font awesome cdn link  -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-      <!-- custom css file link  -->
       <link rel="stylesheet" href="../css/admin_style.css">
 
    </head>
@@ -38,11 +35,9 @@
 
    <?php include '../utilities/admin_header.php' ?>
 
-   <!-- messages section starts  -->
-
    <div class="container-2">
 
-      <h1 class="heading">mensajes</h1>
+      <h1 class="heading">Mensajes</h1>
 
       <div class="box-container">
 
@@ -71,17 +66,6 @@
 
       </div>
 
-   <!-- messages section ends -->
-
-
-
-
-
-
-
-
-
-   <!-- custom js file link  -->
    <script src="../js/admin_script.js"></script>
 
    </body>

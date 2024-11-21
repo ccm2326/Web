@@ -25,17 +25,17 @@ if(isset($_POST['add_product'])){
    $select_products->execute([$name]);
 
    if($select_products->rowCount() > 0){
-      $message[] = '¡el nombre del producto ya existe!';
+      $message[] = '¡El nombre del producto ya existe!';
    }else{
       if($image_size > 2000000){
-         $message[] = 'eL tamaño de la imagen es demasiado grande';
+         $message[] = 'El tamaño de la imagen es demasiado grande';
       }else{
          move_uploaded_file($image_tmp_name, $image_folder);
 
          $insert_product = $conn->prepare("INSERT INTO `products`(name, category, price, image) VALUES(?,?,?,?)");
          $insert_product->execute([$name, $category, $price, $image]);
 
-         $message[] = '¡nuevo producto añadido!';
+         $message[] = '¡Nuevo producto añadido!';
       }
 
    }
@@ -124,10 +124,7 @@ if(isset($_GET['delete'])){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>productos</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
@@ -135,36 +132,6 @@ if(isset($_GET['delete'])){
 
 <?php include '../utilities/admin_header.php' ?>
 
-<!-- add products section starts  -->
-
-<!-- <section class="add-products"> -->
-<!-- 
-<section class="">
-   <form action="" method="POST" enctype="multipart/form-data">
-      <h3>Añadir producto</h3>
-      <input type="text" required placeholder="introduzca el nombre del producto" name="name" maxlength="100" class="box">
-      <input type="number" min="0" max="9999999999" required placeholder="introduzca el precio del producto" name="price" onkeypress="if(this.value.length == 10) return false;" class="box">
-      <select name="category" class="box" required>
-         <option value="" disabled selected>seleccione categoría --</option>
-         <option value="mujer">mujer</option>
-         <option value="hombre">hombre</option>
-         <option value="niño">niño</option>
-         <option value="bebes">bebes</option>
-      </select>
-      <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp" required>
-      <input type="submit" value="añadir producto" name="add_product" class="btn">
-   </form>
-
-</section> -->
-
-<!-- add products section ends -->
-
-<!-- show products section starts  -->
-
-<!-- <section class="">
-   <h3>Añadir producto</h3>
-
-</section> -->
 <div class="modal modal-add hidden">
    <form action="" method="POST" enctype="multipart/form-data">
       <h3>Añadir producto</h3>
@@ -184,6 +151,7 @@ if(isset($_GET['delete'])){
       </div>
    </form>
 </div>
+
 <!-- Modal para editar producto -->
 <div class="modal modal-edit hidden" style="top: 10%">
    <form id="edit-form" method="POST" enctype="multipart/form-data">
@@ -254,8 +222,6 @@ if(isset($_GET['delete'])){
 
 </section>
 
-<!-- show products section ends -->
-<!-- custom js file link  -->
 
 <script>
    const modal = document.querySelector(".modal-add");

@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
       $_SESSION['admin_id'] = $fetch_admin_id['id'];
       header('location:dashboard.php');
    }else{
-      $message[] = 'incorrect username or password!';
+      $message[] = 'Usuario o contraseña incorrecta';
    }
 
 }
@@ -32,10 +32,8 @@ if(isset($_POST['submit'])){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>acceso</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
@@ -54,31 +52,17 @@ if(isset($message)){
 }
 ?>
 
-<!-- admin login form section starts  -->
-
 <section class="form-container">
 
    <form action="" method="POST">
-      <h3>inicia sesión ahora</h3>
-      <p>nombre de usuario predeterminado =<span>administrador</span> & contraseña = <span>111</span></p>
+      <h3>Inicia sesión</h3>
+      <p>Usuario: <span>admin</span> Contraseña: <span>111</span></p>
       <input type="text" name="name" maxlength="20" required placeholder="ingrese su nombre de usuario" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="pass" maxlength="20" required placeholder="ingrese su contraseña" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="submit" value="login now" name="submit" class="btn">
+      <input type="submit" value="Iniciar sesión" name="submit" class="btn">
    </form>
 
 </section>
-
-<!-- admin login form section ends -->
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
