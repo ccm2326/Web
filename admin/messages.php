@@ -11,10 +11,10 @@
    }
 
    if(isset($_GET['delete'])){
-      $delete_id = $_GET['delete'];
+      $delete_id = $_GET['delete']; // Obtiene el ID a través de la URL
       $delete_message = $conn->prepare("DELETE FROM `messages` WHERE id = ?");
       $delete_message->execute([$delete_id]);
-      header('location:messages.php');
+      header('location:messages.php'); // Redirige al usuario a la pestaña de mensajes
    }
 
    ?>
